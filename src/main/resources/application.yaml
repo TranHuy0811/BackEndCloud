@@ -16,5 +16,8 @@ spring:
       ddl-auto: update
     show-sql: true
 
+cors:
+  allowedOrigin: ${ALLOWED_ORIGIN}
+
 jwt:
   secretKey: "wGhTdSC5wNkr7/Y6WAJGRd4tGyTILYA4ceU2hTLldwRqbwbkX3zeuB0Ra692dawd"

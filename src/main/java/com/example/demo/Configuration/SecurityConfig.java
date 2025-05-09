@@ -33,6 +33,8 @@ public class SecurityConfig {
     final String[] PUBLIC_ENDPOINTS = {"/user", "/auth"};
     @Value("${jwt.secretKey}")
     String SECRET_KEY;
+    @Value("${cors.allowedOrigin}")
+    String ALLOWED_ORIGIN;
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
@@ -60,7 +62,7 @@ public class SecurityConfig {
     @Bean
     public CorsFilter corsFilter() {
         CorsConfiguration corsConfiguration = new CorsConfiguration();
-        corsConfiguration.addAllowedOrigin("http://localhost:3000");
+        corsConfiguration.addAllowedOrigin(ALLOWED_ORIGIN);
         corsConfiguration.addAllowedMethod("*");
         corsConfiguration.addAllowedHeader("*");
 
