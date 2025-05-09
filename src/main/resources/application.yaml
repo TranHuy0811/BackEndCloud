@@ -1,0 +1,20 @@
+server:
+  port: 7979
+  servlet:
+    context-path: /cloud
+
+spring:
+  datasource:
+    url:
+    username:
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+jwt:
+  secretKey: "wGhTdSC5wNkr7/Y6WAJGRd4tGyTILYA4ceU2hTLldwRqbwbkX3zeuB0Ra692dawd"
